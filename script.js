@@ -34,12 +34,12 @@ document.querySelector('#menu-btn').onclick = () =>
     loginForm.classList.remove('active');
 }
 
-window.onscoll = () =>
+window.onsrcoll = () =>
 {
     searchForm.classList.remove('active');
     shoppingCart.classList.remove('active');
     loginForm.classList.remove('active');
-    navbar.classList.remove('active');
+    navbar.classList.toggle('active');
 }
 
 var swiper = new Swiper(".reviews-slider", {
@@ -82,3 +82,10 @@ var swiper = new Swiper(".product-slider", {
     },
     },
 });
+
+/*
+document.getElementById("login-btn").addEventListener("click",function(){
+    window.location.href = "login.html";
+});
+
+*/

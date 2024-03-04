@@ -35,7 +35,7 @@ body{
 
 section{
     padding: 2rem 9%;
-    background: peachpuff;
+    background: papayawhip;
 }
 .heading{
     text-align: center;
@@ -245,9 +245,10 @@ section{
     box-shadow: var(--box-shadow);
     padding: 2rem;
     border-radius: .5rem;
-    background: white;
     text-align: center;
+    background: #fff;
 }
+
 
 .header .login-form.active{
     right: 2rem;
@@ -282,13 +283,13 @@ section{
     color: var(--green);
 }
 
+
 .home{
     justify-content: center;
     display: flex;
-    background: url('banner1.jpeg') no-repeat;
+    background: url('bg2.webp') no-repeat;
     background-position: center;
     background-size: cover;
-    height: 815px;
     padding-top: 17rem;
     padding-bottom: 10rem;
 }
@@ -311,7 +312,6 @@ section{
 }
 
 .features .box-container{
-    height: 500px;
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
     gap: 1.5rem;
@@ -351,7 +351,6 @@ section{
     margin-bottom: 2rem;
 }
 .products .product-slider .box{
-    height: 500px;
     background: white;
     border-radius: .5rem;
     text-align: center;
@@ -383,7 +382,6 @@ section{
 }
 
 .categories .box-container{
-    height: 500px;
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(26rem, 1fr));
     gap: 1.5rem;
@@ -420,7 +418,6 @@ section{
     padding: 1rem;
 }
 .review .reviews-slider .box{
-    height: 500px;
     background: white;
     border-radius: .5rem;
     text-align: center;
@@ -571,7 +568,18 @@ section{
     color: var(--light-color);
     padding: 1rem 0;
 }
-
+.footer .credit{
+    text-align: center;
+    margin-top: 2rem;
+    padding: 1rem;
+    padding-top: 2.5rem;
+    font-size: 2rem;
+    color: var(--black);
+    border-top: var(--border);
+}
+.footer .credit span{
+    color: var(--green);
+}
 
 /* media query */
 @media ( max-width: 991px)
@@ -622,5 +630,8 @@ section{
     }
     .heading{
         font-size: 2.5rem;
+    }
+    .footer{
+        text-align: center;
     }
 }
