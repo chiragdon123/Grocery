@@ -91,7 +91,10 @@ section{
 .header .logo i{
     color: var(--green);
 }
-
+.logo{
+    color: blueviolet;
+    
+}
 .header .navbar a{
     font-size: 1.7rem;
     margin: 0 1rem;
@@ -580,6 +583,7 @@ section{
 .footer .credit span{
     color: var(--green);
 }
+
 
 /* media query */
 @media ( max-width: 991px)

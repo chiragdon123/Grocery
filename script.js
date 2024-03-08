@@ -89,7 +89,7 @@ document.getElementById("login-btn").addEventListener("click",function(){
 });
 
 document.getElementById("cart-btn").addEventListener("click",function(){
-    window.location.href = "cart.html";
+    window.location.href = "login.html";
 });
 
 
