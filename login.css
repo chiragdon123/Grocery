@@ -13,7 +13,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    background:linear-gradient(#68e1b7, #243b55);
+    background:url(digi.png);
     background-size: cover;
   }
   

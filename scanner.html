@@ -2,7 +2,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Scanner Page</title>
+  <title>Scanner</title>
   <link rel="stylesheet" href="style.css">
   <style>
     body, html {
@@ -76,11 +76,11 @@ p{
       <img src="scanner.jpeg" alt="Scanner Image">
       <p>Scanning...</p>
       <!-- Assuming you'll have a button to cancel the scan -->
-      <a href="categories.html" class="btn">Cancel Scan</a>
+      <a onclick="goBack()" class="btn">Cancel Scan</a>
     </div>
   </div>
 
-  <section class="footer">
+  <section id="footer">
     <div class="box-container">
         <div class="box">
             <h3> ART GALLERY </h3>
@@ -128,7 +128,9 @@ p{
   
 
   <script>
-
+    function goBack() {
+  window.history.back();
+}
   </script>
 </body>
 </html>

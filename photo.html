@@ -1,0 +1,670 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Photography</title>
+<link rel="stylesheet" href="style.css">
+<style>
+    /* General Styles */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background: powderblue;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+/* Shopping Cart Styles */
+#items {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(380px, 1fr)); /* Adjust the minmax value to your preference */
+  gap: 20px; /* Adjust the gap between items */
+  justify-items: center;
+}
+
+.item {
+  height: 450px;
+  width:400px ;
+  text-align: center;
+  border: 5px solid #ccc;
+  border-radius: 10px;
+  padding: 10px;
+  transition: transform 0.3s;
+}
+
+.item:hover {
+  transform: translateY(-5px);
+}
+
+.item img {
+  width: 250px;
+  height: 250px;
+  margin-bottom: 10px;
+  transition: transform 0.3s;
+}
+
+.item:hover img {
+  transform: scale(1.1);
+}
+
+.item h3 {
+  font-size: 25px;
+  margin: 5px 0;
+  color: #333;
+}
+
+.item p {
+  font-size: 15px;
+  margin: 5px 0;
+  color: #777;
+}
+
+.add-to-cart {
+  background-color: #4CAF50;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: background-color 0.3s;
+}
+
+.add-to-cart:hover {
+  background-color: #45a049;
+}
+
+/* Cart Styles */
+#cart {
+  margin: 20px 300px;
+  border: 5px solid #ccc;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+#cart h2 {
+  font-size: 25px;
+  margin-top: 0;
+}
+#cart-total, h3{
+  font-size: 20px;
+  margin-top: 20px;
+}
+
+#cart-items {
+  list-style-type: none;
+  padding: 0;
+}
+
+#cart-items li {
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+#checkout-btn {
+  font-size: 25px;
+  background-color: #f44336;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: background-color 0.3s;
+  margin-top: 50px;
+}
+
+#checkout-btn:hover {
+  background-color: #d32f2f;
+}
+
+/* Scanner Styles */
+#scanner {
+  margin: 20px 500px;
+  border: 5px solid #ccc;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+#scanner h2 {
+  font-size: 25px;
+  margin-top: 0;
+}
+
+#total-input {
+  font-size: 15px;
+  width: calc(100% - 70%);
+  padding: 10px;
+  margin-bottom: 20px;
+  margin-top: 10px;
+}
+
+#scan-btn {
+  font-size: 20px;
+  background-color: #2196F3;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: background-color 0.3s;
+}
+
+#scan-btn:hover {
+  background-color: #0b7dda;
+}
+
+#result {
+  font-size: 25px;
+  margin-top: 10px;
+  font-weight: bold;
+}
+h1 {
+  text-decoration: underline;
+  font-size: 30px ; /* Adjust the font size as needed */
+  color: #333; /* Text color */
+  text-align: center; /* Center align the text */
+  margin-bottom: 10px;
+  margin-top: 100px;
+  text-transform: uppercase; /* Add some space below the heading */
+}
+
+</style>
+</head>
+<body>
+  <header class="header">
+    <a class="logo">ART GALLERY</a>
+<nav class="navbar">
+  <a href="index.html">Home</a>
+  <a href="#footer">Contact</a>
+  <a href="categories.html">Categories</a>
+  <a href="#items">Gallery</a>
+  <a href="#cart">SHOP</a>
+</nav>
+</header>
+
+<h1>PHOTOGRAPHY ART GALLERY</h1>
+<br>
+<br>
+<br>
+<div id="items">
+  <div class="item">
+    <img src="photo.jpeg" alt="Product 1">
+    <h3>Product 1</h3>
+    <p>$10.00</p>
+    <button class="add-to-cart">Add to Cart</button>
+  </div>
+
+  <div class="item">
+    <img src="photo.jpeg" alt="Product 2">
+    <h3>Product 2</h3>
+    <p>$15.00</p>
+    <button class="add-to-cart">Add to Cart</button>
+  </div>
+
+  <div class="item">
+    <img src="photo.jpeg" alt="Product 2">
+    <h3>Product 2</h3>
+    <p>$15.00</p>
+    <button class="add-to-cart">Add to Cart</button>
+  </div>
+
+  <div class="item">
+    <img src="photo.jpeg" alt="Product 2">
+    <h3>Product 2</h3>
+    <p>$15.00</p>
+    <button class="add-to-cart">Add to Cart</button>
+  </div>
+
+  <div class="item">
+    <img src="digi.png" alt="Product 2">
+    <h3>Product 2</h3>
+    <p>$15.00</p>
+    <button class="add-to-cart">Add to Cart</button>
+  </div>
+
+  <div class="item">
+    <img src="digi.png" alt="Product 2">
+    <h3>Product 2</h3>
+    <p>$15.00</p>
+    <button class="add-to-cart">Add to Cart</button>
+  </div>
+  
+  <div class="item">
+    <img src="digi.png" alt="Product 2">
+    <h3>Product 2</h3>
+    <p>$15.00</p>
+    <button class="add-to-cart">Add to Cart</button>
+  </div>
+
+  <div class="item">
+    <img src="digi.png" alt="Product 2">
+    <h3>Product 2</h3>
+    <p>$15.00</p>
+    <button class="add-to-cart">Add to Cart</button>
+  </div>
+  
+  <div class="item">
+    <img src="digi.png" alt="Product 2">
+    <h3>Product 2</h3>
+    <p>$15.00</p>
+    <button class="add-to-cart">Add to Cart</button>
+  </div>
+  <div class="item">
+    <img src="digi.png" alt="Product 2">
+    <h3>Product 2</h3>
+    <p>$15.00</p>
+    <button class="add-to-cart">Add to Cart</button>
+  </div>
+  <div class="item">
+    <img src="digi.png" alt="Product 2">
+    <h3>Product 2</h3>
+    <p>$15.00</p>
+    <button class="add-to-cart">Add to Cart</button>
+  </div>
+  <div class="item">
+    <img src="digi.png" alt="Product 2">
+    <h3>Product 2</h3>
+    <p>$15.00</p>
+    <button class="add-to-cart">Add to Cart</button>
+  </div>
+  <div class="item">
+    <img src="digi.png" alt="Product 2">
+    <h3>Product 2</h3>
+    <p>$15.00</p>
+    <button class="add-to-cart">Add to Cart</button>
+  </div>
+  <div class="item">
+    <img src="digi.png" alt="Product 2">
+    <h3>Product 2</h3>
+    <p>$15.00</p>
+    <button class="add-to-cart">Add to Cart</button>
+  </div>
+  <div class="item">
+    <img src="digi.png" alt="Product 2">
+    <h3>Product 2</h3>
+    <p>$15.00</p>
+    <button class="add-to-cart">Add to Cart</button>
+  </div>
+  <div class="item">
+    <img src="digi.png" alt="Product 2">
+    <h3>Product 2</h3>
+    <p>$15.00</p>
+    <button class="add-to-cart">Add to Cart</button>
+  </div>
+  <div class="item">
+    <img src="digi.png" alt="Product 2">
+    <h3>Product 2</h3>
+    <p>$15.00</p>
+    <button class="add-to-cart">Add to Cart</button>
+  </div>
+  <div class="item">
+    <img src="digi.png" alt="Product 2">
+    <h3>Product 2</h3>
+    <p>$15.00</p>
+    <button class="add-to-cart">Add to Cart</button>
+  </div>
+  <div class="item">
+    <img src="digi.png" alt="Product 2">
+    <h3>Product 2</h3>
+    <p>$15.00</p>
+    <button class="add-to-cart">Add to Cart</button>
+  </div>
+  <div class="item">
+    <img src="digi.png" alt="Product 2">
+    <h3>Product 2</h3>
+    <p>$15.00</p>
+    <button class="add-to-cart">Add to Cart</button>
+  </div>
+  <div class="item">
+    <img src="digi.png" alt="Product 2">
+    <h3>Product 2</h3>
+    <p>$15.00</p>
+    <button class="add-to-cart">Add to Cart</button>
+  </div>
+  <div class="item">
+    <img src="digi.png" alt="Product 2">
+    <h3>Product 2</h3>
+    <p>$15.00</p>
+    <button class="add-to-cart">Add to Cart</button>
+  </div>
+  <div class="item">
+    <img src="digi.png" alt="Product 2">
+    <h3>Product 2</h3>
+    <p>$15.00</p>
+    <button class="add-to-cart">Add to Cart</button>
+  </div>
+  <div class="item">
+    <img src="digi.png" alt="Product 2">
+    <h3>Product 2</h3>
+    <p>$15.00</p>
+    <button class="add-to-cart">Add to Cart</button>
+  </div>
+  <div class="item">
+    <img src="digi.png" alt="Product 2">
+    <h3>Product 2</h3>
+    <p>$15.00</p>
+    <button class="add-to-cart">Add to Cart</button>
+  </div>
+  <div class="item">
+    <img src="digi.png" alt="Product 2">
+    <h3>Product 2</h3>
+    <p>$15.00</p>
+    <button class="add-to-cart">Add to Cart</button>
+  </div>
+  <div class="item">
+    <img src="digi.png" alt="Product 2">
+    <h3>Product 2</h3>
+    <p>$15.00</p>
+    <button class="add-to-cart">Add to Cart</button>
+  </div>
+  <div class="item">
+    <img src="digi.png" alt="Product 2">
+    <h3>Product 2</h3>
+    <p>$15.00</p>
+    <button class="add-to-cart">Add to Cart</button>
+  </div>
+  <div class="item">
+    <img src="digi.png" alt="Product 2">
+    <h3>Product 2</h3>
+    <p>$15.00</p>
+    <button class="add-to-cart">Add to Cart</button>
+  </div>
+  <div class="item">
+    <img src="digi.png" alt="Product 2">
+    <h3>Product 2</h3>
+    <p>$15.00</p>
+    <button class="add-to-cart">Add to Cart</button>
+  </div>
+  <div class="item">
+    <img src="digi.png" alt="Product 2">
+    <h3>Product 2</h3>
+    <p>$15.00</p>
+    <button class="add-to-cart">Add to Cart</button>
+  </div>
+  <div class="item">
+    <img src="digi.png" alt="Product 2">
+    <h3>Product 2</h3>
+    <p>$15.00</p>
+    <button class="add-to-cart">Add to Cart</button>
+  </div>
+  <div class="item">
+    <img src="digi.png" alt="Product 2">
+    <h3>Product 2</h3>
+    <p>$15.00</p>
+    <button class="add-to-cart">Add to Cart</button>
+  </div>
+  <div class="item">
+    <img src="digi.png" alt="Product 2">
+    <h3>Product 2</h3>
+    <p>$15.00</p>
+    <button class="add-to-cart">Add to Cart</button>
+  </div>
+  <div class="item">
+    <img src="digi.png" alt="Product 2">
+    <h3>Product 2</h3>
+    <p>$15.00</p>
+    <button class="add-to-cart">Add to Cart</button>
+  </div>
+  <div class="item">
+    <img src="digi.png" alt="Product 2">
+    <h3>Product 2</h3>
+    <p>$15.00</p>
+    <button class="add-to-cart">Add to Cart</button>
+  </div>
+  <div class="item">
+    <img src="digi.png" alt="Product 2">
+    <h3>Product 2</h3>
+    <p>$15.00</p>
+    <button class="add-to-cart">Add to Cart</button>
+  </div>
+  <div class="item">
+    <img src="digi.png" alt="Product 2">
+    <h3>Product 2</h3>
+    <p>$15.00</p>
+    <button class="add-to-cart">Add to Cart</button>
+  </div>
+  <div class="item">
+    <img src="digi.png" alt="Product 2">
+    <h3>Product 2</h3>
+    <p>$15.00</p>
+    <button class="add-to-cart">Add to Cart</button>
+  </div>
+  <div class="item">
+    <img src="digi.png" alt="Product 2">
+    <h3>Product 2</h3>
+    <p>$15.00</p>
+    <button class="add-to-cart">Add to Cart</button>
+  </div>
+  <div class="item">
+    <img src="digi.png" alt="Product 2">
+    <h3>Product 2</h3>
+    <p>$15.00</p>
+    <button class="add-to-cart">Add to Cart</button>
+  </div>
+  <div class="item">
+    <img src="digi.png" alt="Product 2">
+    <h3>Product 2</h3>
+    <p>$15.00</p>
+    <button class="add-to-cart">Add to Cart</button>
+  </div>
+  <div class="item">
+    <img src="digi.png" alt="Product 2">
+    <h3>Product 2</h3>
+    <p>$15.00</p>
+    <button class="add-to-cart">Add to Cart</button>
+  </div>
+  <div class="item">
+    <img src="digi.png" alt="Product 2">
+    <h3>Product 2</h3>
+    <p>$15.00</p>
+    <button class="add-to-cart">Add to Cart</button>
+  </div>
+  <div class="item">
+    <img src="digi.png" alt="Product 2">
+    <h3>Product 2</h3>
+    <p>$15.00</p>
+    <button class="add-to-cart">Add to Cart</button>
+  </div>
+  <div class="item">
+    <img src="digi.png" alt="Product 2">
+    <h3>Product 2</h3>
+    <p>$15.00</p>
+    <button class="add-to-cart">Add to Cart</button>
+  </div>
+  <div class="item">
+    <img src="digi.png" alt="Product 2">
+    <h3>Product 2</h3>
+    <p>$15.00</p>
+    <button class="add-to-cart">Add to Cart</button>
+  </div>
+  <div class="item">
+    <img src="digi.png" alt="Product 2">
+    <h3>Product 2</h3>
+    <p>$15.00</p>
+    <button class="add-to-cart">Add to Cart</button>
+  </div>
+  <div class="item">
+    <img src="digi.png" alt="Product 2">
+    <h3>Product 2</h3>
+    <p>$15.00</p>
+    <button class="add-to-cart">Add to Cart</button>
+  </div>
+  <div class="item">
+    <img src="digi.png" alt="Product 2">
+    <h3>Product 2</h3>
+    <p>$15.00</p>
+    <button class="add-to-cart">Add to Cart</button>
+  </div>
+  <div class="item">
+    <img src="digi.png" alt="Product 2">
+    <h3>Product 2</h3>
+    <p>$15.00</p>
+    <button class="add-to-cart">Add to Cart</button>
+  </div>
+
+</div>
+<br>
+<br>
+<br>
+
+<div id="cart">
+  <h2>Shopping Cart</h2>
+  <ul id="cart-items">
+  </ul>
+  <h3>Total: $<span id="cart-total">0.00</span></h3>
+  <button id="checkout-btn">PAY HERE</button>
+</div>
+<br>
+<br>
+<br>
+
+<div id="scanner">
+  <h2>Scanner</h2>
+  <input type="text" id="total-input" placeholder="Enter Total Amount">
+
+  <button id="scan-btn">Scan</button> 
+
+  <p id="result"></p>
+</div>
+
+
+<section id="footer">
+  <div class="box-container">
+      <div class="box">
+          <h3> ART GALLERY </h3>
+          <p>"Step into a world where creativity knows no bounds.</p>
+          <div class="share">
+              <a href="#" class="fa fa-facebook"></a>
+              <a href="#" class="fa fa-instagram"></a>
+              <a href="#" class="fa fa-linkedin"></a>
+              <a href="#" class="fa fa-github"></a>
+          </div>
+      </div>
+
+      <div class="box">
+          <h3> Contact Info </h3>
+          <a href="#" class="link"> <i class="fa fa-phone"></i> +91 8411817034</a>
+          <a href="#" class="link"> <i class="fa fa-phone"></i> +91 8898463918</a>
+          <a href="#" class="link"> <i class="fa fa-envelope"></i> cmahakal09@gmai.com</a>
+          <a href="#" class="link"> <i class="fa fa-envelope"></i> vj2042297@gmail.com</a>
+          <a href="#" class="link"> <i class="fa fa-map-marker"></i> ,Dahisar(E),Mumbai-68,Maharastra,India</a>
+      </div>
+
+      <div class="box">
+          <h3> Quick Links </h3>
+          <a href="#" class="link"><i class="fa fa-arrow-right"></i>Home</a>
+          <a href="#" class="link"><i class="fa fa-arrow-right"></i>Features</a>
+          <a href="#" class="link"><i class="fa fa-arrow-right"></i>Products</a>
+          <a href="#" class="link"><i class="fa fa-arrow-right"></i>Categories</a>
+          <a href="#" class="link"><i class="fa fa-arrow-right"></i>Reviews</a>
+          <a href="#" class="link"><i class="fa fa-arrow-right"></i>Blogs</a>
+      </div>
+
+      <div class="box">
+          <h3> NewsLetter </h3>
+          <p>Suscribe For Latest Updates</p>
+          <input type="email" class="email" placeholder="Enter E-mail here">
+          <input type="submit" class="btn"  value="Suscribe">
+          <img src="pay.jpeg" class="payment-img">
+      </div>
+  </div>
+
+  <div class="credit"> Created By <span>Chirag Mahakal & Vivek Joshi</span> | And All Rights Reserved </div>
+</section>
+
+
+
+
+<script src="script.js"></script>
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+    const addToCartButtons = document.querySelectorAll('.add-to-cart');
+    const cartItemsList = document.getElementById('cart-items');
+    const cartTotal = document.getElementById('cart-total');
+    const checkoutBtn = document.getElementById('checkout-btn');
+    const scanBtn = document.getElementById('scan-btn');
+    const totalInput = document.getElementById('total-input');
+    const result = document.getElementById('result');
+    const scannerSection = document.getElementById('scanner');
+    const paymentOptions = document.getElementById('payment-options');
+
+    let cartItems = [];
+    let totalAmount = 0;
+
+    addToCartButtons.forEach(button => {
+        button.addEventListener('click', function() {
+            const itemContainer = button.parentElement;
+            const name = itemContainer.querySelector('h3').textContent;
+            const price = parseFloat(itemContainer.querySelector('p').textContent.slice(1)); // Removing the '$' sign
+
+            cartItems.push({ name, price });
+            totalAmount += price;
+            updateCart();
+        });
+    });
+
+    function updateCart() {
+        cartItemsList.innerHTML = '';
+        let total = 0;
+        cartItems.forEach((item, index) => {
+            const listItem = document.createElement('li');
+            listItem.textContent = `${item.name} - $${item.price.toFixed(2)}`;
+
+            // Create remove button for each item
+            const removeButton = document.createElement('button');
+            removeButton.style.backgroundColor="red"
+            removeButton.textContent = 'Remove';
+            removeButton.addEventListener('click', function() {
+                // Remove item from cartItems array
+                cartItems.splice(index, 1);
+                totalAmount -= item.price;
+                updateCart();
+            });
+
+            // Append remove button to the list item
+            listItem.appendChild(removeButton);
+
+            // Append list item to the cart items list
+            cartItemsList.appendChild(listItem);
+            total += item.price;
+        });
+        cartTotal.textContent = total.toFixed(2);
+    }
+
+    checkoutBtn.addEventListener('click', function() {
+        totalInput.value = totalAmount.toFixed(2);
+        scannerSection.style.display = 'block';
+        paymentOptions.style.display = 'none';
+    });
+
+    scanBtn.addEventListener('click', function() {
+        const scannedAmount = parseFloat(totalInput.value);
+        if (scannedAmount === 0) {
+            result.textContent = 'Please Select Something To make Payment';
+        } else {
+            if (scannedAmount === totalAmount) {
+                result.textContent = 'Redirecting to payment page...';
+                // Simulate redirection to payment page
+                setTimeout(() => {
+                    window.location.href = 'scanner.html'; // Redirect to payment page
+                }, 2000); // Delay for 2 seconds before redirection
+            } else {
+                result.textContent = 'Payment failed. Amounts do not match.';
+            }
+        }
+    });
+});
+</script>
+</body>
+</html>

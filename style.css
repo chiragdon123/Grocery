@@ -507,36 +507,36 @@ section{
     padding: .5rem 0;
 }
 
-.footer{
+#footer{
     background: white;
 }
-.footer .box-container{
+#footer .box-container{
     display: grid;
     grid-template-columns: repeat(auto-fit,minmax(26rem,1fr));
     gap: 1.5rem;
 }
-.footer .box-container .box h3{
+#footer .box-container .box h3{
     font-size: 2.5rem;
     color: var(--black);
     padding: 1rem 0;
 }
-.footer .box-container .box h3 i{
+#footer .box-container .box h3 i{
     color: var(--green);
 }
-.footer .box-container .box .link{
+#footer .box-container .box .link{
     display: block;
     font-size: 1.5rem;
     color: var(--light-color);
     padding: 1rem 0;
 }
-.footer .box-container .box .link i{
+#footer .box-container .box .link i{
     color: var(--green);
     padding-right: .5rem;
 }
-.footer .box-container .box .link:hover{
+#footer .box-container .box .link:hover{
     padding-right: 2rem;
 }
-.footer .box-container .box .share a{
+#footer .box-container .box .share a{
     height: 5rem;
     width: 5rem;
     line-height: 5rem;
@@ -547,11 +547,11 @@ section{
     background: #eee;
     text-align: center;
 }
-.footer .box-container .box .share a:hover{
+#footer .box-container .box .share a:hover{
     background: var(--green);
     color: white;
 }
-.footer .box-container .box .email{
+#footer .box-container .box .email{
     width: 100%;
     margin: .7rem 0;
     padding: 1rem;
@@ -561,17 +561,17 @@ section{
     color: var(--black);
     text-transform: none;
 }
-.footer .box-container .box .payment-img{
+#footer .box-container .box .payment-img{
     margin-top: 2rem;
     height: 8rem;
 }
-.footer .box-container .box p{
+#footer .box-container .box p{
     font-size: 1.5rem;
     line-height: 1.8;
     color: var(--light-color);
     padding: 1rem 0;
 }
-.footer .credit{
+#footer .credit{
     text-align: center;
     margin-top: 2rem;
     padding: 1rem;
@@ -580,7 +580,7 @@ section{
     color: var(--black);
     border-top: var(--border);
 }
-.footer .credit span{
+#footer .credit span{
     color: var(--green);
 }
 
